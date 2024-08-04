@@ -1,0 +1,23 @@
+{
+    "name": "tiagoandre/tiktok-business-api-sdk",
+    "description": "Unofficial TikTok Business API SDK in PHP: This package provides a simple and unofficial interface for integrating with the TikTok Business API. Developed in PHP, it streamlines the connection with the platform, enabling developers to create and manage marketing campaigns, analyze performance metrics, and automate interactions with TikTok audiences efficiently. Ideal for businesses and agencies looking to enhance their marketing strategies on the world's most popular video social network.",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "Tiagoandrepro\\TiktokBusinessApiSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tiago André",
+            "email": "thiago_andre@live.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.3",
+        "guzzlehttp/guzzle" : "^7.9.2"
+    }
+}
