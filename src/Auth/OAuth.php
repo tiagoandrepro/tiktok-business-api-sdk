@@ -31,7 +31,12 @@ class OAuth
         return "https://business-api.tiktok.com/portal/auth?{$queryString}";
     }
 
-    public function getAccessToken(string $code): \Tiagoandrepro\TiktokBusinessApiSdk\Http\Response
+    public function accountHolderAuthorization()
+    {
+
+    }
+
+    public function getAccessToken(string $code)
     {
         try {
             $request = new Request('POST', 'oauth2/access_token', [], [
