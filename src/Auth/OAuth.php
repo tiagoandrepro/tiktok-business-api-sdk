@@ -21,14 +21,17 @@ class OAuth
     public function getAuthorizationUrl(string $state = null, array $customParams = []): string
     {
         $params = array_merge([
-            'app_id' => $this->appId,
+            'client_key' => $this->appId,
             'state' => $state,
             'redirect_uri' => $this->redirectUrl,
+            'response_type' => 'code',
+            'disable_auto_auth' => 1,
+            'scope' => 'user.info.basic,user.info.username,user.info.stats,user.account.type,user.insights,video.list,video.insights,comment.list,comment.list.manage,video.publish',
         ], $customParams);
 
         $queryString = http_build_query($params);
 
-        return "https://business-api.tiktok.com/portal/auth?{$queryString}";
+       return  "https://www.tiktok.com/v2/auth/authorize?{$queryString}";
     }
 
     public function accountHolderAuthorization()
