@@ -26,7 +26,7 @@ class OAuth
             'redirect_uri' => $this->redirectUrl,
             'response_type' => 'code',
             'disable_auto_auth' => 1,
-            'scope' => 'user.info.basic,user.info.username,user.info.stats,user.account.type,user.insights,video.list,video.insights,comment.list,comment.list.manage,video.publish',
+            'scope' => 'user.info.basic,user.info.username,user.info.stats,user.account.type,user.insights,video.list,video.insights,comment.list,comment.list.manage,video.publish,message.list.read,message.list.send,message.list.manage,user.info.profile',
         ], $customParams);
 
         $queryString = http_build_query($params);
